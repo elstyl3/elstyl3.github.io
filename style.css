@@ -1,9 +1,5 @@
 [v-cloak] { display: none; }
 
-.header-highlight {
-  color: #391be4;
-}
-
 .info {
   padding: 1.5rem;
 }
@@ -24,8 +20,9 @@
   min-width: 0;
 }
 
+
 .taophong {
-    background-color: rgb(158, 58, 240);
+    background-color: rgb(161, 101, 211);
     border-color: transparent;
     color: #fff;
     border-color: #dbdbdb;
@@ -55,4 +52,10 @@
     padding-top: calc(0.5em - 1px);
     position: relative;
     vertical-align: top;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+  background-image: url(https://i.pinimg.com/736x/50/27/df/5027df66a7010cd3192d8db142b07382.jpg);
 }
