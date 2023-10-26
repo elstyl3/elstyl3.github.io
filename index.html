@@ -1,61 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="website icon" href="logo web.png">
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>EsltyleWeb</title>
+  <link rel="website icon" href="logo web.png">
+  <!-- import icon font awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+<!-- Import thư viện JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+// kéo xuống khoảng cách 500px thì xuất hiện nút Top-up
+var offset = 100;
+// thời gian di trượt 0.75s ( 1000 = 1s )
+var duration = 750;
+$(function(){
+$(window).scroll(function () {
+if ($(this).scrollTop() > offset)
+$('#top-up').fadeIn(duration);else
+$('#top-up').fadeOut(duration);
+});
+$('#top-up').click(function () {
+$('body,html').animate({scrollTop: 0}, duration);
+});
+});
+</script>
+<div title="Về đầu trang" id="top-up">
+<i class="fas fa-arrow-circle-up"></i></div>
+</head>
+<body>
+      <div class="menutren">
+      <ul class="menungang">
+          <li><a href="https://ambatucom.github.io/">Home</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61550477069838">Solutions</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61550477069838">Products</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61550477069838">Services</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61550477069838">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="bocuatin"></div>
+    <div class="hinhkhoi" id="square">
+      <div class="hinhanh1"><img src="cu Huy.jpg" alt=""></div>
+        <a class="text1" href="https://www.facebook.com/profile.php?id=100088560546593">Người tạo ra trang web này là ai.           </a>
+        <a onclick href="https://www.facebook.com/profile.php?id=100088560546593">
+          <img class="fb" src="https://icon2.cleanpng.com/20180412/sge/kisspng-question-mark-ip-multimedia-subsystem-information-logo-facebook-5acfeb02079b46.3904295615235755540312.jpg" alt="">
+        </a>
 
-    <title>ElstyleCall</title>
-
-    <!-- import the webpage's stylesheet -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="/style.css" />
-
-    <!-- import the webpage's javascript file -->
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios@0.20.0/dist/axios.min.js"></script>
-    <script src="https://cdn.stringee.com/sdk/web/2.2.1/stringee-web-sdk.min.js"></script>
-  </head>
-  <body>
-    <div class="container has-text-centered" v-cloak id="app">
-      <h1 class="title">
-        Chào mừng đến với 
-        <span class="header-highlight">ElstyleCall</span>
-      </h1>
-
-      <div>
-        <button class="taophong" v-if="!room" @click="createRoom">
-          Create Meeting
-        </button>
-
-        <button class="button is-info" v-if="!room" @click="joinWithId">
-          Join Meeting
-        </button>
-
-        <button class="button is-info" v-if="room" @click="publish(true)">
-          Share Desktop
-        </button>
-      </div>
-
-      <div v-if="roomId" class="info">
-        <p>Bạn đang ở trong room <strong>{{roomId}}</strong>.</p>
-        <p>
-          Gửi link này cho bạn bè cùng join room nhé
-          <a v-bind:href="roomUrl" target="_blank">{{roomUrl}}</a>.
-        </p>
-        <p>Hoặc bạn cũng có thể copy <code>{{roomId}}</code> để share.</p>
-      </div>
     </div>
 
-    <div class="container">
-      <div id="videos"></div>
+    <div class="tin2" id="hinhvuong">
+      <div class="hinhanh1"><img src="https://vsthemes.org/uploads/posts/workshop/29302380586402c87bb87b5917983575.webp" alt=""></div>
+        <a class="text2" href="https://www.facebook.com/profile.php?id=100088560546593">Tao là wibu đc chưa.</a>
+        <a onclick href="https://www.facebook.com/profile.php?id=100088560546593">
+          <img class="fb" src="https://icon2.cleanpng.com/20180412/sge/kisspng-question-mark-ip-multimedia-subsystem-information-logo-facebook-5acfeb02079b46.3904295615235755540312.jpg" alt="">
+        </a>
+    <div class="tin3" id="hinhvuong2">
+      <div class="hinhanh1"><img src="https://images.unsplash.com/photo-1505685296765-3a2736de412f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y3NzfGVufDB8fDB8fHww&w=1000&q=80" alt=""></div>
+        <a class="text3" href="https://drive.google.com/drive/folders/1i8geCPKXVw-ynMx0erQJeaW6n6rkjI6A?fbclid=IwAR3vXF8hzqo3XJZ7rdfpsb6x8M1yNyYIU7Xk1Lr6JEVh9HBpgJFXztzAopU">Chia sẻ một chút về cách tôi học html và css.</a>
+        <a onclick href="https://www.facebook.com/profile.php?id=100088560546593">
+          <img class="fb" src="https://icon2.cleanpng.com/20180412/sge/kisspng-question-mark-ip-multimedia-subsystem-information-logo-facebook-5acfeb02079b46.3904295615235755540312.jpg" alt="">
+        </a>
     </div>
-  </body>
-  <script src="/api.js"></script>
-  <script src="/script.js"></script>
-</html>
+
+    <div class="tin4" id="hinhvuong2">
+      <div class="hinhanh1"><img src="Screenshot 2023-08-17 093945.png" alt=""></div>
+        <a class="text4" href="https://www.youtube.com/channel/UCBnsba7d2x1MM5Tfi5ARWJg"tz>Tôi đang tập tành làm youtube đó.</a>
+        <a onclick href="https://www.facebook.com/profile.php?id=100088560546593">
+          <img class="fb" src="https://icon2.cleanpng.com/20180412/sge/kisspng-question-mark-ip-multimedia-subsystem-information-logo-facebook-5acfeb02079b46.3904295615235755540312.jpg" alt="">
+        </a>
+    </div>
+  </div>
+
+  <div class="tin5" id="hinhvuong2">
+    <div class="hinhanh1"><img src="logo fanpage.png" alt=""></div>
+      <a class="text4" href="https://www.facebook.com/profile.php?id=61550477069838"tz>Các bạn hãy nhớ ghé thăm fanpage của tôi.</a>
+      <a onclick href="https://www.facebook.com/profile.php?id=100088560546593">
+        <img class="fb" src="https://icon2.cleanpng.com/20180412/sge/kisspng-question-mark-ip-multimedia-subsystem-information-logo-facebook-5acfeb02079b46.3904295615235755540312.jpg" alt="">
+      </a>
+  </div>
+</div>
+
+    <video class="video1" controls="control" width="300px" click >
+      <source src="0818 (1).mp4" type="video/mp4" />
+   </video>
+   <div class="quay"></div>
+   <script src="main.js"></script>
+
+    <video class="video2" controls="control" width="300px" click >
+      <source src="0823(1).mp4" type="video/mp4" />
+   </video>
+
+   <p>Name:Huy</p>
+   <h1><span>EsltyleWeb</span></h1>
+   
+    
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
